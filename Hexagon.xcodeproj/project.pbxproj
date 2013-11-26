@@ -21,6 +21,7 @@
 		EBFE62C61845613E00915A97 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBFE62A81845613D00915A97 /* UIKit.framework */; };
 		EBFE62CE1845613E00915A97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EBFE62CC1845613E00915A97 /* InfoPlist.strings */; };
 		EBFE62D01845613E00915A97 /* HexagonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EBFE62CF1845613E00915A97 /* HexagonTests.m */; };
+		EBFE62DB184561B400915A97 /* HexagonView.m in Sources */ = {isa = PBXBuildFile; fileRef = EBFE62DA184561B400915A97 /* HexagonView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		EBFE62CB1845613E00915A97 /* HexagonTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HexagonTests-Info.plist"; sourceTree = "<group>"; };
 		EBFE62CD1845613E00915A97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EBFE62CF1845613E00915A97 /* HexagonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HexagonTests.m; sourceTree = "<group>"; };
+		EBFE62D9184561B400915A97 /* HexagonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HexagonView.h; sourceTree = "<group>"; };
+		EBFE62DA184561B400915A97 /* HexagonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HexagonView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,11 +117,13 @@
 			children = (
 				EBFE62B31845613D00915A97 /* AppDelegate.h */,
 				EBFE62B41845613D00915A97 /* AppDelegate.m */,
+				EBFE62D9184561B400915A97 /* HexagonView.h */,
+				EBFE62DA184561B400915A97 /* HexagonView.m */,
+				EBFE62BC1845613D00915A97 /* Images.xcassets */,
 				EBFE62B61845613D00915A97 /* Main.storyboard */,
+				EBFE62AB1845613D00915A97 /* Supporting Files */,
 				EBFE62B91845613D00915A97 /* ViewController.h */,
 				EBFE62BA1845613D00915A97 /* ViewController.m */,
-				EBFE62BC1845613D00915A97 /* Images.xcassets */,
-				EBFE62AB1845613D00915A97 /* Supporting Files */,
 			);
 			path = Hexagon;
 			sourceTree = "<group>";
@@ -249,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBFE62BB1845613D00915A97 /* ViewController.m in Sources */,
+				EBFE62DB184561B400915A97 /* HexagonView.m in Sources */,
 				EBFE62B51845613D00915A97 /* AppDelegate.m in Sources */,
 				EBFE62B11845613D00915A97 /* main.m in Sources */,
 			);
