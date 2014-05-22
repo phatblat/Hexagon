@@ -7,6 +7,7 @@
 //
 
 #import "HexagonView.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation HexagonView
 
@@ -36,6 +37,7 @@
     CGFloat height = self.frame.size.height;
     CGFloat hPadding = width * 1 / 8 / 2;
 
+    UIGraphicsBeginImageContext(self.frame.size);
     UIBezierPath *path = [UIBezierPath bezierPath];
     [path moveToPoint:CGPointMake(width/2, 0)];
     [path addLineToPoint:CGPointMake(width - hPadding, height / 4)];
@@ -46,7 +48,7 @@
     [path closePath];
     [path fill];
     maskLayer.path = path.CGPath;
-
+    UIGraphicsEndImageContext();
     self.layer.mask = maskLayer;
 }
 
