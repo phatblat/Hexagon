@@ -27,5 +27,5 @@
 #import <UIKit/UIKit.h>
 
 @interface HexagonView : UIView
-
+@property (nonatomic, assign) CGFloat padding;
 @end

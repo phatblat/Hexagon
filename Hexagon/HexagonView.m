@@ -38,7 +38,7 @@
 
     CGFloat width = self.frame.size.width;
     CGFloat height = self.frame.size.height;
-    CGFloat hPadding = 0;
+    CGFloat hPadding = (self.padding?self.padding:0);
 
     UIGraphicsBeginImageContext(self.frame.size);
     UIBezierPath *path = [UIBezierPath bezierPath];
