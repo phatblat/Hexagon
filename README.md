@@ -6,4 +6,4 @@ A simple UIView subclass that creates a north/south hexagon, with very little Qu
 
 ## License
 
-This code is available under the MIT license. See the LICENSE file for more info.
+This code is available under the MIT license. See the [LICENSE](LICENSE.md) file for more info.
