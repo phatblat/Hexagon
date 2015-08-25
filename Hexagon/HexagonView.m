@@ -29,31 +29,16 @@
 
 @implementation HexagonView
 
-- (id)initWithFrame:(CGRect)frame
+- (void)drawRect:(CGRect)rect
 {
-    if ((self = [super initWithFrame:frame])) {
-        [self configureLayerForHexagon];
-    }
-    return self;
-}
-
-- (id)initWithCoder:(NSCoder *)coder
-{
-    if ((self = [super initWithCoder:coder])) {
-        [self configureLayerForHexagon];
-    }
-    return self;
-}
-
-- (void)configureLayerForHexagon
-{
+    [super drawRect:rect];
     CAShapeLayer *maskLayer = [CAShapeLayer layer];
     maskLayer.fillRule = kCAFillRuleEvenOdd;
     maskLayer.frame = self.bounds;
 
     CGFloat width = self.frame.size.width;
     CGFloat height = self.frame.size.height;
-    CGFloat hPadding = width * 1 / 8 / 2;
+    CGFloat hPadding = (self.padding?self.padding:0);
 
     UIGraphicsBeginImageContext(self.frame.size);
     UIBezierPath *path = [UIBezierPath bezierPath];
