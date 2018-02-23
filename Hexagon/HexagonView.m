@@ -45,6 +45,12 @@
     return self;
 }
 
+- (void)redraw
+{
+    [self configureLayerForHexagon];
+    [self setNeedsLayout];
+}
+
 - (void)configureLayerForHexagon
 {
     CAShapeLayer *maskLayer = [CAShapeLayer layer];

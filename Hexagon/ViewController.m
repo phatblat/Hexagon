@@ -25,8 +25,15 @@
 //
 
 #import "ViewController.h"
+#import "HexagonView.h"
 
 @interface ViewController ()
+
+@property (strong, nonatomic, nonnull) IBOutlet HexagonView *hexagon;
+@property (strong, nonatomic, nonnull) IBOutlet NSLayoutConstraint *width;
+@property (strong, nonatomic, nonnull) IBOutlet NSLayoutConstraint *aspectRatio;
+@property (strong, nonatomic, nonnull) IBOutlet UISlider *slider;
+@property (assign, nonatomic) NSNumber *baseWidth;
 
 @end
 
@@ -35,13 +42,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    self.slider.value = 1.0;
+    self.baseWidth = @(self.width.constant);
+    NSLog(@"baseWidth: %@", self.baseWidth);
 }
 
-- (void)didReceiveMemoryWarning
+- (IBAction)sliderMoved:(UISlider *)sender
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    NSLog(@"Slider value: %f", sender.value);
+    self.width.constant = self.baseWidth.floatValue * sender.value;
+    [self.hexagon redraw];
 }
 
 @end
