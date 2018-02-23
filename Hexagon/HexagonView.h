@@ -28,4 +28,8 @@
 
 @interface HexagonView : UIView
 
+@property (nonatomic, assign) CGFloat padding;
+
+- (void)redraw;
+
 @end
